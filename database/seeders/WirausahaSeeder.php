@@ -18,7 +18,6 @@ class WirausahaSeeder extends Seeder
     {
         $faker = Faker::create('id_ID');
         for($i = 1; $i <= 5; $i++){
-            // insert data ke table siswa menggunakan Faker
             \DB::table('wirausahas')->insert([
                 'alumniId' => $faker->numberBetween($min = 0000, $max = 9999),
                 'namaUsaha' => $faker->company,

@@ -18,7 +18,6 @@ class PendaftarSeeder extends Seeder
     {
         $faker = Faker::create('id_ID');
         for($i = 1; $i <= 5; $i++){
-            // insert data ke table siswa menggunakan Faker
             \DB::table('pendaftar_kerjas')->insert([
                 'lowonganId' => $faker->numberBetween($min = 0000, $max = 9999),
                 'namaPendaftar' => $faker->name,

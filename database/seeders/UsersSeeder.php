@@ -18,7 +18,6 @@ class UsersSeeder extends Seeder
     {
         $faker = Faker::create('id_ID');
         for($i = 1; $i <= 5; $i++){
-            // insert data ke table siswa menggunakan Faker
             \DB::table('users')->insert([
                 'namaUser' => $faker->name,
                 'email' => $faker->email,
