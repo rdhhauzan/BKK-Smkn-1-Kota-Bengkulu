@@ -19,7 +19,7 @@ class KuliahSeeder extends Seeder
         $faker = Faker::create('id_ID');
         for($i = 1; $i <= 5; $i++){
             // insert data ke table siswa menggunakan Faker
-            \DB::table('kerja_samas')->insert([
+            \DB::table('kuliahs')->insert([
                 'alumniId' => $faker->numberBetween($min = 1000, $max = 9000),
                 'tempatKuliah' => $faker->city,
                 'jurusan' => $faker->word,
