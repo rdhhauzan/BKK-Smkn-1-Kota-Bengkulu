@@ -29,7 +29,6 @@ class AlumniSeeder extends Seeder
                 'email' => $faker->email,
                 'telephone' => $faker->phoneNumber,
                 'alamat' => $faker->address,
-                'password' => $faker->password,
             ]);
     }
 }
