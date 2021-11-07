@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
+
+use Faker\Factory as Faker;
 
 class UsersSeeder extends Seeder
 {
@@ -15,9 +16,14 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'namaUser' => Str::random(50),
-            
-        ]);
+        $faker = Faker::create('id_ID');
+        for($i = 1; $i <= 5; $i++){
+            // insert data ke table siswa menggunakan Faker
+            \DB::table('users')->insert([
+                'namaUser' => $faker->name,
+                'email' => $faker->email,
+                'password' => $faker->password,
+            ]);
     }
+}
 }
